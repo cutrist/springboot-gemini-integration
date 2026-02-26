@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: springboot-gemini-integration
+
+server:
+  port: 5644
+
+gemini:
+  api:
+    url: http://localhost:11434/api/chat
+    model: gemini-3-flash-preview:cloud

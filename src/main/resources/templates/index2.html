@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini AI | Next-Gen Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 0 8px 0;
+            color: var(--text-main);
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .section-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            margin-top: 24px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            font-family: inherit;
+            font-size: 15px;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+        }
+
+        input[type="file"] {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            padding: 8px 0;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border);
+            margin: 32px 0;
+        }
+
+        .response-card {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .response-card h3 {
+            margin-top: 0;
+            font-size: 0.9rem;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h2>Gemini AI Interface</h2>
+        <p class="subtitle">Experience the next generation of multimodal chat</p>
+    </header>
+
+    <span class="section-label">Quick Message</span>
+    <form action="/chat" method="post">
+        <textarea name="message" placeholder="Type your question here..."></textarea>
+        <button type="submit" class="btn">Send Text ✨</button>
+    </form>
+
+    <hr>
+
+    <span class="section-label">Visual Analysis</span>
+    <form action="/chat-image" method="post" enctype="multipart/form-data">
+        <textarea name="message" placeholder="Ask something about an image..."></textarea>
+        <input type="file" name="image" accept="image/*">
+        <button type="submit" class="btn">Upload & Analyze 🖼️</button>
+    </form>
+
+    <div th:if="${response}" class="response-card">
+        <h3>AI Response</h3>
+        <p th:text="${response}"></p>
+    </div>
+</div>
+
+</body>
+</html>
